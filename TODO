@@ -1,11 +1,15 @@
 
 Doing:
-  ☐ Put converters code into coditionals: If "C" so execute "Centimeters Converter" and use a loop to avoid exit from "Centimeters Converter" until user choose it
+  ☐ Try "repeat-while" loop, if it evaluates to false the execution terminates
+    ☐ Solve "cannot convert value of type 'String' to expected argument type 'Bool' " issue
 To Do:
-  At the beginning, ask user wich measure do they want to convert: inches or centimeters and executing the corresponding code
-  Create functions with converter code and call them in the general conditional
+  ☐ Use a loop to avoid to exit from Functions until user choose it @high
 Done:
+  ✔ Is there an "until" loop in Swift? Investigate ✍ No, it doesn't exist but I can use "repeat-while" loop @done(19-03-13 11:30) 
+  ✔ Create functions with converter code and call them in the general conditional @done(19-03-13 11:07)
+  ✔ Put converters code into coditionals: If "C" so execute "Centimeters Converter" @done(19-03-13 11:00)
   ✔ 2 user inputs, the same code execution: How to deal with "C" and "c" inputs? to trigger Centimeters Converter Code ✍ || "or" Logical Operator @done(19-03-08 16:47)
+  ✔ At the beginning, ask user wich measure do they want to convert: inches or centimeters and executing the corresponding code @done(19-03-13 11:09)
   ✔ Create a Conditional Statement to execute corresponding code: inches or centimeters @critical @done(19-03-08 16:26)
   ✔ Solve "incorrect" user's input issue. What happens if the user doesn't give a number as input? @high @done(19-03-06 11:21)
   ✔ Convert `inputIn` var into an *Integer* and use it in `fromInToCm` var @high @done(19-03-04 13:14)
