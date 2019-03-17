@@ -18,15 +18,24 @@ extension StringProtocol { //A protocol defines a blueprint of methods, properti
 }
 
 func convertCentimetersToInches() {
-    print("How many centimeters do you want to convert to inches?")
+    print("How many centimeters do you want to convert to inches? Press 'Q' to Quit")
     let str: String = readLine()!
-    if let value = str.double  {
-        let fromCmToIn = value / centimeter
-        print("\(value) centimeters are \(Float(fromCmToIn)) inches")
-    } 
-    else {
-        print("Invalid Input. Please enter only numbers")
-    }
+    label:
+
+    repeat {
+        if let value = str.double  {
+            let fromCmToIn = value / centimeter
+            print("\(value) centimeters are \(Float(fromCmToIn)) inches")
+
+        } 
+        else if str == "Q" || str == "q" {
+            print("Bye!")
+            break label        
+        }
+        else {
+            print("Invalid Input. Please enter only numbers")
+        }
+    } while (str != "Q" || str != "q")
 }
 func convertInchesToCentimeters() {
     print("How many inches do you want to convert to centimeters?")
@@ -35,19 +44,19 @@ func convertInchesToCentimeters() {
         let fromInToCm = value * centimeter
         print("\(value) inches are \(Float(fromInToCm)) centimeters")
     }
+    else if str == "Q" {
+        print("Bye!")
+    }
     else {
         print("Invalid Input. Please enter only numbers")
     }
 }
 
-print("Press 'C' key if you want to convert Centimeters to inches and 'I' key if you want to convert Inches or centimeters. Press 'Q' to Quit")
+print("Press 'C' key if you want to convert Centimeters to inches and 'I' key if you want to convert Inches or centimeters.")
 let usersChoice: String = readLine()!
-let usersChoiceToQuit: String = readLine()!
 
 if  usersChoice == "C" || usersChoice == "c" { // || "or" logical operator 
-    repeat {
         convertCentimetersToInches()  // Convert Centimeters to Inches Function
-    } while (usersChoiceToQuit != true)
 }
 else if usersChoice == "I" || usersChoice == "i" {
     convertInchesToCentimeters()  // Convert Inches to Centimeters Function
