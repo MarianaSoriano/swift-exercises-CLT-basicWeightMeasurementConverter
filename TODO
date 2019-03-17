@@ -1,7 +1,7 @@
 
 Doing:
   ☐ Try "repeat-while" loop, if it evaluates to false the execution terminates
-    ☐ Solve "cannot convert value of type 'String' to expected argument type 'Bool' " issue
+    ✔ Solve "cannot convert value of type 'String' to expected argument type 'Bool' " issue @done(19-03-14 13:02)
 To Do:
   ☐ Use a loop to avoid to exit from Functions until user choose it @high
 Done:
