@@ -18,13 +18,13 @@ extension StringProtocol { //A protocol defines a blueprint of methods, properti
 }
 
 func convertCentimetersToInches() {
-    print("How many centimeters do you want to convert to inches? Press 'Q' to Quit")
-    let str: String = readLine()!
     label:
+    for _ in 1...3 {
+        print("How many centimeters do you want to convert to inches? Press 'Q' to Quit")
+        let str: String = readLine()!
         if let value = str.double  {
             let fromCmToIn = value / centimeter
             print("\(value) centimeters are \(Float(fromCmToIn)) inches")
-
         }
         else if str == "Q" || str == "q" {
             print("Bye!")
@@ -33,6 +33,9 @@ func convertCentimetersToInches() {
         else {
             print("Invalid Input. Please enter only numbers")
         }
+    }
+
+
 }
 func convertInchesToCentimeters() {
     print("How many inches do you want to convert to centimeters?")
@@ -49,7 +52,7 @@ func convertInchesToCentimeters() {
     }
 }
 
-print("Press 'C' key if you want to convert Centimeters to inches and 'I' key if you want to convert Inches or centimeters.")
+print("Press 'C' key if you want to convert Centimeters to inches and 'I' key if you want to convert Inches to centimeters.")
 let usersChoice: String = readLine()!
 
 if  usersChoice == "C" || usersChoice == "c" { // || "or" logical operator 
