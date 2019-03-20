@@ -21,21 +21,18 @@ func convertCentimetersToInches() {
     print("How many centimeters do you want to convert to inches? Press 'Q' to Quit")
     let str: String = readLine()!
     label:
-
-    repeat {
         if let value = str.double  {
             let fromCmToIn = value / centimeter
             print("\(value) centimeters are \(Float(fromCmToIn)) inches")
 
-        } 
+        }
         else if str == "Q" || str == "q" {
             print("Bye!")
-            break label        
+            break label
         }
         else {
             print("Invalid Input. Please enter only numbers")
         }
-    } while (str != "Q" || str != "q")
 }
 func convertInchesToCentimeters() {
     print("How many inches do you want to convert to centimeters?")
