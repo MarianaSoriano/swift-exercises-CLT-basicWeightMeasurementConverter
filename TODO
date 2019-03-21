@@ -1,9 +1,10 @@
 
 Doing:
-  ☐ Try "repeat-while" loop, if it evaluates to false the execution terminates
+  ☐ Studing loops and nested loops in Swift
 To Do:
   ☐ Use a loop to avoid to exit from Functions until user choose it @high
 Done:
+  ✔ ✘ Try "repeat-while" loop, if it evaluates to false the execution terminates ✘ I tried but it has not worked as expected @done(19-03-21 11:43)
   ✔ Solve "cannot convert value of type 'String' to expected argument type 'Bool' " issue @done(19-03-14 13:02)
   ✔ Is there an "until" loop in Swift? Investigate ✍ No, it doesn't exist but I can use "repeat-while" loop @done(19-03-13 11:30) 
   ✔ Create functions with converter code and call them in the general conditional @done(19-03-13 11:07)
