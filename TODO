@@ -1,9 +1,15 @@
 
 Doing:
-  ☐ Studing loops and nested loops in Swift
+  ☐ Finish "Inches" code.
 To Do:
-  ☐ Use a loop to avoid to exit from Functions until user choose it @high
+  ☐ Do "Ounces" code.
+  ☐ Do "Grams" code.
+  ☐ Complete 'O' Onces and 'G' Grams options in the first conditional
+To Do Optionaly in a future:
+  ☐ Eliminate ceros from quantities. For example: 4.0 
+  ☐ Colorize CommandLine Tool output (results)
 Done:
+  ✔ Use a loop to avoid to exit from Functions until user choose it ✔︎ A simple 'while' worked @high @done(19-03-22 11:37)
   ✔ ✘ Try "repeat-while" loop, if it evaluates to false the execution terminates ✘ I tried but it has not worked as expected @done(19-03-21 11:43)
   ✔ Solve "cannot convert value of type 'String' to expected argument type 'Bool' " issue @done(19-03-14 13:02)
   ✔ Is there an "until" loop in Swift? Investigate ✍ No, it doesn't exist but I can use "repeat-while" loop @done(19-03-13 11:30) 
