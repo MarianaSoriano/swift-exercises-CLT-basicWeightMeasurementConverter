@@ -84,19 +84,27 @@ func convertInchesToCentimeters() {
 
 // TODO: Complete 'O' Onces and 'G' Grams options
 print("""
-Welcome. Press 'C' key if you want to convert Centimeters to inches and 
-'I' key if you want to convert Inches to centimeters.
-Press 'O' key to convert ounces and 'G' to grams
+Welcome. 
+Press 'C' key to convert Centimeters to inches 
+Press 'I' key to convert Inches to centimeters
+Press 'O' key to convert Ounces to grams
+Press 'G' key to convert Grams to ounces
+Press 'Q' key to Quit
 """) //Multiline String Literal
 let usersChoice: String = readLine()!
-
+label:
 if  usersChoice == "C" || usersChoice == "c" { // || "or" logical operator 
     convertCentimetersToInches()  // Convert Centimeters to Inches Function
 }
 else if usersChoice == "I" || usersChoice == "i" {
     convertInchesToCentimeters()  // Convert Inches to Centimeters Function
-} else {
-    print("Invalid Key. Please press 'C' or 'I' keys")
+} 
+else if usersChoice == "Q" || usersChoice == "q" {
+    print("Come back soon!")
+    break label
+}
+else {
+    print("Invalid Key. Please press 'C', 'I', 'O' or 'G' keys")
 }
 // DONE: Solve "cannot convert value of type 'String' to expected argument type 'Bool' "  issue
 // DONE: Ask the user their values and do calculation
