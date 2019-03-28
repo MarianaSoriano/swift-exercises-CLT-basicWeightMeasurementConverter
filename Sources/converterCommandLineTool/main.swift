@@ -21,17 +21,24 @@ extension StringProtocol { //A protocol defines a blueprint of methods, properti
     }
 }
 
-func convertCentimetersToInches() {
+func converter(choice unit: String, equivalentChoice equivalentUnit: String) -> String {
+    if choice == "centimeters" {
+        let choice = centimeter
+        let equivalentChoice = inch
+    }
+    let usersInput = unit
+    print(unit,equivalentUnit)
+    return usersInput
     print(startString)
     let str: String = readLine()!
     if str == "Q" || str == "q" {
         print("Come back soon!")
     }
     else if str == "S" || str == "s" {
-        let valueString = "centimeters"
-        let contraryValueString = "inches"
+        let valueString = usersInput
+        let equivalentValueString = equivalentUnit
         while str != "Q" {
-            print("\nHow many \(valueString) do you want to convert to \(contraryValueString)? Press 'Q' to Quit") //\n line break
+            print("\nHow many \(valueString) do you want to convert to \(equivalentValueString)? Press 'Q' to Quit") //\n line break
             let str: String = readLine()!
             if str == "Q" || str == "q" {
                 print("Bye!")
@@ -39,8 +46,8 @@ func convertCentimetersToInches() {
             }
             else if str != "Q" || str != "q" {
                 if let value = str.double  {
-                    let fromCmToIn = value / centimeter
-                    print("\(value) \(valueString) are \(Float(fromCmToIn)) \(contraryValueString)")
+                    let fromUnitToequivalent = value / equivalentChoice
+                    print("\(value) \(valueString) are \(Float(fromUnitToEquivalent)) \(equivalentValueString)")
                 }
                 else { 
                     print(errorString)
@@ -49,40 +56,11 @@ func convertCentimetersToInches() {
         } 
     }
 }
-// TODO: Finish "Inches" code.
-func convertInchesToCentimeters() {
-    print(startString)
-    let str: String = readLine()!
-    if str == "Q" || str == "q" {
-        print("Come back soon!")
-    }
-    else if str == "S" || str == "s" {
-        let valueString = "inches"
-        let contraryValueString = "centimeters"
-        while str != "Q" {
-            print("\nHow many \(valueString) do you want to convert to \(contraryValueString)? Press 'Q' to Quit") //\n line break
-            let str: String = readLine()!
-            if str == "Q" || str == "q" {
-                print("Bye!")
-                break
-            }
-            else if str != "Q" || str != "q" {
-                if let value = str.double  {
-                    let fromInToCm = value * centimeter
-                    print("\(value) \(valueString) are \(Float(fromInToCm)) \(contraryValueString)")
-                }
-                else { 
-                    print(errorString)
-                } 
-            }
-        } 
-    }
-}
+
 
 // TODO: Do "Ounces" code.
 // TODO: Do "Grams" code.
 
-// TODO: Complete 'O' Onces and 'G' Grams options
 print("""
 Welcome. 
 Press 'C' key to convert Centimeters to inches 
@@ -94,11 +72,17 @@ Press 'Q' key to Quit
 let usersChoice: String = readLine()!
 label:
 if  usersChoice == "C" || usersChoice == "c" { // || "or" logical operator 
-    convertCentimetersToInches()  // Convert Centimeters to Inches Function
+    converter(choice: "centimeters", equivalentChoice: "inches")
 }
 else if usersChoice == "I" || usersChoice == "i" {
-    convertInchesToCentimeters()  // Convert Inches to Centimeters Function
+    converter(choice: "inches", equivalentChoice: "centimeters")
 } 
+else if usersChoice == "O" || usersChoice == "o" {
+    converter(choice: "ounces", equivalentChoice: "grams")
+}
+else if usersChoice == "G" || usersChoice == "g" {
+    converter(choice: "grams", equivalentChoice: "ounces")
+}
 else if usersChoice == "Q" || usersChoice == "q" {
     print("Come back soon!")
     break label
@@ -106,6 +90,7 @@ else if usersChoice == "Q" || usersChoice == "q" {
 else {
     print("Invalid Key. Please press 'C', 'I', 'O' or 'G' keys")
 }
+// DONE: Complete 'O' Onces and 'G' Grams options
 // DONE: Solve "cannot convert value of type 'String' to expected argument type 'Bool' "  issue
 // DONE: Ask the user their values and do calculation
 // DONE: Convert "inputIn" var into an Integer and use it in fromInToCm var
