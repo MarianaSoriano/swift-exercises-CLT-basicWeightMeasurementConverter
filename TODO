@@ -2,7 +2,7 @@
 Doing:
   ☐ Put in practice "Don’t Repeat Yourself (DRY)" principle: Create a general funcion with only a few changes according to measurement unit @high 
 To Do:
-  
+  ☐ Create 'convert' func with 'GRAMS' as unit and 'Ounces' as equivalenUnit @critical 
 To Do Optionaly in a future:
   ☐ Eliminate ceros from quantities. For example: 4.0 
   ☐ Colorize CommandLine Tool output (results)
